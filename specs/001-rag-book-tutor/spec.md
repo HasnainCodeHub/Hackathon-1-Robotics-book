@@ -110,6 +110,6 @@ A content maintainer/author wants to update a chapter and have the changes refle
 
 ## Open Questions / TBD
 
--   **[NEEDS CLARIFICATION: Vector DB Choice]**: Which vector database will be used for the initial implementation (e.g., Qdrant, pgvector, ChromaDB)?
--   **[NEEDS CLARIFICATION: Hosting Environment]**: Where will the RAG backend service be hosted (e.g., Vercel Serverless, container service, traditional server)?
--   **[NEEDS CLARIFICATION: Math Rendering]**: Will math rendering (e.g., via KaTeX) be included in the initial release, or deferred?
+-   **Vector DB Choice**: Qdrant will be used for the initial implementation.
+-   **Hosting Environment**: The RAG backend service will be hosted using Vercel Serverless Functions.
+-   **Math Rendering**: KaTeX rendering for mathematical formulas will be included in the initial release.
