@@ -113,3 +113,12 @@ A content maintainer/author wants to update a chapter and have the changes refle
 -   **Vector DB Choice**: Qdrant will be used for the initial implementation.
 -   **Hosting Environment**: The RAG backend service will be hosted using Vercel Serverless Functions.
 -   **Math Rendering**: KaTeX rendering for mathematical formulas will be included in the initial release.
+
+## Clarifications
+
+### Session 2025-12-07
+
+- Q: Book Content Depth vs Breadth → A: Technical-heavy (equations, derivations, control math)
+- Q: Math & Formalism → A: Full mathematical derivations (e.g., Jacobians, dynamics equations)
+- Q: Coding Examples → A: Mixed Python + C++/ROS snippets
+- Q: ROS & Simulators → A: ROS/ROS2 as core topic, Simulators included with hands-on examples
