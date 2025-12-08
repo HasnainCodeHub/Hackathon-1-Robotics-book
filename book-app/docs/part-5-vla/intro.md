@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 15: Vision-Language-Action (VLA) Models'
-sidebar_label: '15. Vision-Language-Action'
+title: "Chapter 15: Vision-Language-Action (VLA) Models"
+sidebar_label: "CHAPTER 15: VISION-LANGUAGE-ACTION (VLA) MODELS"
 ---
 
 # Chapter 15: Vision-Language-Action (VLA) Models

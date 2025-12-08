@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 13: Isaac Sim - The AI Gymnasium'
-sidebar_label: '13. Isaac Sim'
+title: "Chapter 13: Isaac Sim - The AI Gymnasium"
+sidebar_label: "CHAPTER 13: ISAAC SIM - THE AI GYMNASIUM"
 ---
 
 # Chapter 13: Isaac Sim - The AI Gymnasium

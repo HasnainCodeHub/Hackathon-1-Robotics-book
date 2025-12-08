@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 17: LLM-Based Task Planning'
-sidebar_label: '17. LLM Planning'
+title: "Chapter 17: LLM-Based Task Planning"
+sidebar_label: "CHAPTER 17: LLM-BASED TASK PLANNING"
 ---
 
 # Chapter 17: LLM-Based Task Planning

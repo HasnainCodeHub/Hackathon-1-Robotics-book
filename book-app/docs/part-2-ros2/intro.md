@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 5: ROS 2 - The Robot''s Nervous System'
-sidebar_label: '5. The Robot Nervous System'
+title: "Chapter 5: ROS 2 - The Robot's Nervous System"
+sidebar_label: "CHAPTER 5: ROS 2 - THE ROBOT'S NERVOUS SYSTEM"
 ---
 
 # Chapter 5: ROS 2 - The Robot's Nervous System

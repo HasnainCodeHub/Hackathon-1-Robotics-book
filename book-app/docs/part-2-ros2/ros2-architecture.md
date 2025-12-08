@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 6: The ROS 2 Architecture'
-sidebar_label: '6. ROS 2 Architecture'
+title: "Chapter 6: The ROS 2 Architecture"
+sidebar_label: "CHAPTER 6: THE ROS 2 ARCHITECTURE"
 ---
 
 # Chapter 6: The ROS 2 Architecture

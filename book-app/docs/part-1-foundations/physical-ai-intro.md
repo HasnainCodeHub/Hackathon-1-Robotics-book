@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 2: An Intuitive Introduction to Physical AI'
-sidebar_label: '2. What is Physical AI?'
+title: "An Intuitive Introduction to Physical AI"
+sidebar_label: "AN INTUITIVE INTRODUCTION TO PHYSICAL AI"
 ---
 
 # An Intuitive Introduction to Physical AI

@@ -1,8 +1,7 @@
 ---
-title: 'Chapter 1: Introduction to Physical AI'
-sidebar_label: '1. Introduction to Physical AI'
+title: "Chapter 1: Introduction to Physical AI"
+sidebar_label: "CHAPTER 1: INTRODUCTION TO PHYSICAL AI"
 ---
-
 # Chapter 1: Introduction to Physical AI
 
 ## Learning Objectives

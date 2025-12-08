@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 3: The Humanoid Landscape'
-sidebar_label: '3. The Humanoid Landscape'
+title: "The Humanoid Landscape: An Overview"
+sidebar_label: "THE HUMANOID LANDSCAPE: AN OVERVIEW"
 ---
 
 # The Humanoid Landscape: An Overview

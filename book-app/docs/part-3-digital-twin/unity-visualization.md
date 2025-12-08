@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 11: Visualization and Interaction'
-sidebar_label: '11. Visualization (Unity)'
+title: "Chapter 11: Visualization and Interaction (Unity)"
+sidebar_label: "CHAPTER 11: VISUALIZATION AND INTERACTION (UNITY)"
 ---
 
 # Chapter 11: Visualization and Interaction (Unity)

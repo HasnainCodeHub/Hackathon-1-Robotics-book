@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 12: The AI-Robot Brain - NVIDIA Isaac'
-sidebar_label: '12. The AI-Robot Brain (Isaac)'
+title: "Chapter 12: The AI-Robot Brain - NVIDIA Isaac"
+sidebar_label: "CHAPTER 12: THE AI-ROBOT BRAIN - NVIDIA ISAAC"
 ---
 
 # Chapter 12: The AI-Robot Brain - NVIDIA Isaac

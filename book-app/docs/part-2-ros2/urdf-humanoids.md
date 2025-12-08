@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 8: Describing the Robot - URDF'
-sidebar_label: '8. Describing Robots (URDF)'
+title: "Chapter 8: Describing the Robot - URDF"
+sidebar_label: "CHAPTER 8: DESCRIBING THE ROBOT - URDF"
 ---
 
 # Chapter 8: Describing the Robot - URDF

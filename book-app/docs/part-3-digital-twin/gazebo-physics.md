@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 10: Physics Simulation with Gazebo'
-sidebar_label: '10. Gazebo Physics'
+title: "Chapter 10: Physics Simulation with Gazebo"
+sidebar_label: "CHAPTER 10: PHYSICS SIMULATION WITH GAZEBO"
 ---
 
 # Chapter 10: Physics Simulation with Gazebo

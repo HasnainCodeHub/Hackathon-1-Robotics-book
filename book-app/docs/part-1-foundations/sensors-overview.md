@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 4: The Robot''s Senses - An Overview'
-sidebar_label: '4. Sensors Overview'
+title: "The Robot's Senses: An Overview"
+sidebar_label: "THE ROBOT'S SENSES: AN OVERVIEW"
 ---
 
 # The Robot's Senses: An Overview

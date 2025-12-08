@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 9: The Digital Twin - Simulation in Robotics'
-sidebar_label: '9. The Digital Twin'
+title: "Chapter 9: The Digital Twin - Simulation in Robotics"
+sidebar_label: "CHAPTER 9: THE DIGITAL TWIN - SIMULATION IN ROBOTICS"
 ---
 
 # Chapter 9: The Digital Twin - Simulation in Robotics

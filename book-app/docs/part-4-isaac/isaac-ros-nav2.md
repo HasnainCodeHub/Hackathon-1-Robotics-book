@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 14: Isaac ROS and Navigation'
-sidebar_label: '14. Isaac ROS & Navigation'
+title: "Chapter 14: Isaac ROS and Navigation"
+sidebar_label: "CHAPTER 14: ISAAC ROS AND NAVIGATION"
 ---
 
 # Chapter 14: Isaac ROS and Navigation

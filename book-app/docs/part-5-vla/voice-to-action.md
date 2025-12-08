@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 16: Voice Commands and Robotic Action'
-sidebar_label: '16. Voice to Action'
+title: "Chapter 16: Voice Commands and Robotic Action"
+sidebar_label: "CHAPTER 16: VOICE COMMANDS AND ROBOTIC ACTION"
 ---
 
 # Chapter 16: Voice Commands and Robotic Action

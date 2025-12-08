@@ -1,162 +1,55 @@
-<!--
----
-Sync Impact Report
----
-- Version change: none → 1.0.0
-- List of modified principles:
-  - New: Specification-first
-  - New: Book-first
-  - New: Truth over creativity
-  - New: Pedagogical clarity
-  - New: Reuse & consistency
-  - New: Accessibility & inclusivity
-  - New: AI collaboration
-- Added sections:
-  - Core Principles
-  - Book Content & Structure Standards
-  - UI/UX & Docusaurus Standards
-  - RAG Chatbot Requirements
-  - Tech Stack & Architecture Standards
-  - Code Quality & Testing
-  - Content & Style Guidelines
-  - AI-Driven Workflow Expectations
-  - Non-Goals (Out of Scope for Now)
-  - Success Criteria
-  - Governance
-- Removed sections: None
-- Templates requiring updates:
-  - ⚠ pending: .specify/templates/plan-template.md
-  - ⚠ pending: .specify/templates/spec-template.md
-  - ⚠ pending: .specify/templates/tasks-template.md
-- Follow-up TODOs: None
--->
-# Physical AI & Humanoid Robotics – AI-Native Book + RAG Chatbot Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. Specification-first
-All major features start from clear specs in `.specify/`, not ad-hoc coding.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### II. Book-first
-The textbook content and its structure are the single source of truth; UI and chatbot must respect the book.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### III. Truth over creativity
-For technical content and chatbot answers, factual accuracy and faithfulness to the book are more important than “creative” responses.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### IV. Pedagogical clarity
-Every chapter must be logically ordered, beginner-friendly, and build on previous knowledge.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### V. Reuse & consistency
-Patterns (chapter layout, code example style, diagrams, glossary, callout boxes) must be consistent across the entire book.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-### VI. Accessibility & inclusivity
-All content and UI must be accessible (ARIA, keyboard navigation, sufficient contrast) and understandable by global learners.
+### [PRINCIPLE_6_NAME]
 
-### VII. AI collaboration
-Always assume an AI coding agent (Gemini CLI) is doing the mechanical work; humans provide direction, review, and corrections.
 
-## Book Content & Structure Standards
-- Follow a book-like hierarchy: Preface → Parts → Chapters → Sections → Subsections, similar to the AI Native Software Development book navigation.
-- Each “Part” groups a coherent set of chapters (e.g., Foundations, Kinematics & Control, Sensors & Perception, Humanoid Locomotion, Hardware & Safety, Capstone / Projects).
-- Each chapter must:
-  - Start with learning objectives and a short summary.
-  - Include core theory, intuitive explanations, diagrams (or placeholders), and, where relevant, math definitions.
-  - Use terminology consistently and define all important terms.
-  - End with a recap, key terms, and practice questions/hackathon-style exercises.
-- All book content is authored in Markdown/MDX under the Docusaurus docs directory (e.g., /docs/...), using frontmatter for title, sidebar position, and tags.
-- The Google Doc content should be transformed into well-structured chapters; no copy-paste dumping. Each section must be edited for clarity, flow, and consistency.
-- When in doubt, prefer more structure (shorter sections, clear headings) over long walls of text.
+[PRINCIPLE__DESCRIPTION]
 
-## UI/UX & Docusaurus Standards
-- Use Docusaurus (classic template) docs layout with:
-  - Left sidebar for parts/chapters navigation.
-  - On-page table of contents for headings.
-  - Search (built-in Docusaurus search or search plugin).
-- Styling:
-  - Clean, modern UI; prioritize readability over flashy design.
-  - Responsive layout on mobile, tablet, and desktop.
-  - Dark/light mode support.
-- Navigation:
-  - Book should feel like a real textbook: clear progression, “Previous/Next” links, and breadcrumbs.
-  - URL structure should be stable and semantic (e.g., /docs/preface, /docs/part-1/intro, /docs/part-13/humanoid-locomotion).
-- Avoid heavy custom UI frameworks unless strictly needed. Prefer staying close to Docusaurus defaults and theme extensions.
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-## RAG Chatbot Requirements
-- The chatbot’s purpose is to answer questions about the book, guide learners through topics, and help them understand concepts from the Physical AI & Humanoid Robotics textbook.
-- Retrieval:
-  - Index all book content (Markdown/MDX) into a vector store.
-  - Chunk content by sections/headings while preserving enough context for meaningful answers.
-  - Store metadata (chapter, part, heading, URL anchor) for citations.
-- Answer behavior:
-  - Always ground answers in retrieved book passages.
-  - Provide citations back to specific chapters/sections (e.g., “See Part 3, Chapter 2: Sensors & Perception, ‘LIDAR vs Depth Cameras’ section.”).
-  - If the book does not contain the answer, the chatbot must say it does not know or explain that the topic is out of scope, rather than hallucinating.
-  - Encourage the learner to read relevant sections instead of giving only “short” answers when the question is broad.
-- Safety:
-  - No unsafe guidance regarding robotics hardware, electricity, or physical safety; emphasize safety best practices and disclaimers when discussing hardware, mechanical design, or experiments.
-  - When a user asks for dangerous modifications or unsafe experiments, the assistant must decline and redirect toward safe educational content.
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## Tech Stack & Architecture Standards
-- Frontend:
-  - Docusaurus (React-based) for the book site.
-  - Minimal custom components for callouts, diagrams, and math (e.g., admonitions, code blocks, optional math rendering).
-- Backend / RAG service:
-  - Implement a separate backend service for RAG (e.g., Node.js/TypeScript or Python) with clean API boundaries (e.g., /api/chat or /api/ask).
-  - Use a well-supported vector store (e.g., Qdrant, pgvector, or similar) to store embedded book chunks.
-  - Use Gemini (or a compatible LLM) for generation, always with retrieval context injected.
-- Integration:
-  - Chat UI is embedded into the Docusaurus site (e.g., a “Ask the Book” page or floating chat widget) that calls the RAG backend APIs.
-  - Ensure CORS, auth (if needed), and rate limiting are considered from the start.
-- Infrastructure:
-  - Everything must be containerizable (Dockerfile present).
-  - Use environment variables for secrets (API keys, DB credentials).
-  - Keep local dev setup simple (e.g., docker-compose for vector DB + backend; npm/yarn for Docusaurus).
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-## Code Quality & Testing
-- Languages:
-  - TypeScript strict mode for frontend and any Node-based backend.
-  - Python code must follow a consistent style (e.g., PEP 8) if used for RAG or tooling.
-- Testing:
-  - Minimum: unit tests for RAG pipeline helpers (chunking, embedding, retrieval filters).
-  - Integration tests for the chat API (given a known small corpus, verify deterministic answers and citations).
-  - Smoke tests / basic E2E check for Docusaurus build and site navigation.
-- Static checks:
-  - Linting for TypeScript/JavaScript and Python.
-  - Markdown linting for docs (headings, links, frontmatter).
-- Performance:
-  - Docusaurus site must build without warnings.
-  - RAG API should respond in a reasonable time for typical queries (aim for <5 seconds end-to-end under normal load).
-
-## Content & Style Guidelines
-- Tone: clear, friendly, instructional; avoid unnecessary jargon; explain technical terms on first use.
-- Use diagrams and examples liberally (even as TODO placeholders) to explain kinematics, control, sensors, and humanoid motion.
-- Use consistent notation and symbols in formulas and pseudocode.
-- Always attribute diagrams or external content when required; avoid copyright violations.
-- Avoid overpromising real-world capabilities; keep claims realistic and grounded in robotics fundamentals.
-
-## AI-Driven Workflow Expectations
-- All major work should follow Spec-Kit Plus phases:
-  - /sp.constitution → /sp.specify → /sp.clarify → /sp.plan → /sp.tasks → /sp.implement.
-- For each significant feature (e.g., “Book structure & sidebar,” “RAG backend,” “Chat UI integration”), create a dedicated spec folder with spec, plan, tasks.
-- Use Agents as collaborators, not oracles: humans must always review generated code and text.
-- Constitution rules must be respected in all future specs and plans; if a later spec conflicts with this constitution, prefer updating the constitution explicitly instead of silently ignoring it.
-
-## Non-Goals (Out of Scope for Now)
-- No user accounts, authentication, or payment systems.
-- No complex multi-tenant authoring workflow; content editing is done via Git/Docusaurus workflow only.
-- No fully autonomous physical robot control system; focus is educational, not controlling real robots in production.
-- No general open-domain Q&A; the chatbot is strictly a “Book Tutor” constrained to this textbook.
-
-## Success Criteria
-- A production-ready Docusaurus site that feels like a polished online textbook with clear parts, chapters, and navigation like the AI-Native book.
-- All major content from the Physical AI & Humanoid Robotics Google Doc is migrated, structured, and improved for clarity.
-- Fully working RAG chatbot that:
-  - Answers from the book,
-  - Provides chapter/section citations,
-  - Avoids hallucinations as much as possible.
-- Codebase is clean, tested, and understandable to future maintainers and students.
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
-This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All pull requests and reviews must verify compliance with this constitution. Complexity must be justified.
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

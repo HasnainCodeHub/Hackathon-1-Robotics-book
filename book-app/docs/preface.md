@@ -1,3 +1,8 @@
+---
+title: "Preface: Physical AI & Humanoid Robotics"
+sidebar_label: "PREFACE: Physical AI & HUMANOID ROBOTICS"
+---
+
 # Module Overview: Your Journey into Physical AI & Humanoid Robotics
 
 Welcome, aspiring roboticist, to an exciting exploration into the world of Physical AI and Humanoid Robotics! This book is designed as your comprehensive guide, structured to build your knowledge and skills progressively, culminating in the ability to understand, design, and even build intelligent robotic systems.

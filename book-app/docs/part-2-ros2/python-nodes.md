@@ -1,6 +1,6 @@
 ---
-title: 'Chapter 7: Building Nodes with Python'
-sidebar_label: '7. Python Nodes (rclpy)'
+title: "Chapter 7: Building Nodes with Python (rclpy)"
+sidebar_label: "CHAPTER 7: BUILDING NODES WITH PYTHON (RCLPY)"
 ---
 
 # Chapter 7: Building Nodes with Python (rclpy)
@@ -148,7 +148,7 @@ class ParameterNode(Node):
     def timer_callback(self):
         # Get the current value of the parameter
         my_param = self.get_parameter('my_parameter').get_parameter_value().string_value
-        selfp.get_logger().info(f'Hello, {my_param}!')
+        self.get_logger().info(f'Hello, {my_param}!')
 ```
 -   `declare_parameter('my_parameter', 'world')`: This makes the node aware of a parameter named `my_parameter` and gives it a default value of `'world'`.
 -   `get_parameter(...)`: This retrieves the parameter's current value.
