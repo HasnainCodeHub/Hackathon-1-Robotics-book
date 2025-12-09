@@ -15,6 +15,11 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // Custom fields for runtime configuration
+  customFields: {
+    apiUrl: process.env.API_URL || 'http://localhost:8001',
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,19 +47,33 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Physical AI & Humanoid Robotics',
+      title: 'AI-Driven Development',
       logo: {
-        alt: 'Site Logo',
+        alt: 'AI-Driven Development',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'defaultSidebar',
           position: 'left',
-          label: 'Textbook',
+          label: 'Book',
         },
-        {to: '/ask-the-book', label: 'Ask the Book', position: 'left'},
+        {
+          href: 'https://github.com/panaversity',
+          label: 'Panaversity',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/HasnainCodeHub/Hackathon-1-Robotics-book',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/HasnainCodeHub',
+          label: 'My GitHub',
+          position: 'right',
+        },
       ],
     },
     footer: {

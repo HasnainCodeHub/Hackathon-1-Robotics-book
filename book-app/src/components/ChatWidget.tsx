@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './ChatWidget.module.css';
 
 interface Message {
@@ -7,6 +8,9 @@ interface Message {
 }
 
 export default function ChatWidget(): React.JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
+  const apiUrl = (siteConfig.customFields?.apiUrl as string) || 'http://localhost:8001';
+
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -30,7 +34,7 @@ export default function ChatWidget(): React.JSX.Element {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8001/api/ask', {
+      const response = await fetch(`${apiUrl}/api/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: currentInput }),

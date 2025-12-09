@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './ask.module.css';
 
 interface Message {
@@ -8,7 +9,10 @@ interface Message {
   citations?: any[];
 }
 
-export default function AskTheBook(): JSX.Element {
+export default function AskTheBook(): React.JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
+  const apiUrl = (siteConfig.customFields?.apiUrl as string) || 'http://localhost:8001';
+
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +30,7 @@ export default function AskTheBook(): JSX.Element {
     // setError(null); // Clear previous error
 
     try {
-      const response = await fetch('http://localhost:8001/api/ask', {
+      const response = await fetch(`${apiUrl}/api/ask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

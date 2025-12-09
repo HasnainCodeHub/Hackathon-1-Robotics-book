@@ -1,14 +1,10 @@
-from agents import Agent, Runner, OpenAIChatCompletionsModel, AsyncOpenAI, RunConfig
-from dotenv import load_dotenv, find_dotenv
 import os
-
-# Load environment variables
-load_dotenv(find_dotenv())
+from agents import Agent, Runner, OpenAIChatCompletionsModel, AsyncOpenAI, RunConfig
 
 # Get API key from environment variable
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+gemini_api_key = os.getenv("GOOGLE_API_KEY")
 if not gemini_api_key:
-    raise ValueError("GEMINI_API_KEY environment variable is not set")
+    raise ValueError("GOOGLE_API_KEY environment variable is not set")
 
 external_client = AsyncOpenAI(
     api_key=gemini_api_key.strip(),
@@ -36,6 +32,7 @@ tutor_agent = Agent(
     ),
     model=llm_model,
 )
+
 
 async def run_agent(question: str, context: str) -> str:
     """

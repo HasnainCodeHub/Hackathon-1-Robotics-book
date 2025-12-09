@@ -1,6 +1,7 @@
 fastapi
-uvicorn
-python-dotenv
-requests
-numpy
+uvicorn[standard]
+python-frontmatter
+openai
 openai-agents
+requests
+pydantic
